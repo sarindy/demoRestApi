@@ -1,0 +1,949 @@
+2017-05-02 10:38:53 INFO  c.e.DemoRestApiApplication:48 - Starting DemoRestApiApplication on Sarindys-MacBook-Pro.local with PID 1181 (/Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI/target/classes started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 10:38:53 INFO  c.e.DemoRestApiApplication:637 - No active profile set, falling back to default profiles: default
+2017-05-02 10:38:53 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@682a3469: startup date [Tue May 02 10:38:53 ICT 2017]; root of context hierarchy
+2017-05-02 10:38:56 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-05-02 10:38:56 INFO  o.a.c.c.StandardService:179 - Starting service Tomcat
+2017-05-02 10:38:56 INFO  o.a.c.c.StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-02 10:38:56 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring embedded WebApplicationContext
+2017-05-02 10:38:56 INFO  o.s.w.c.ContextLoader:276 - Root WebApplicationContext: initialization completed in 2935 ms
+2017-05-02 10:38:56 INFO  o.s.b.w.s.ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-02 10:38:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-02 10:38:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-02 10:38:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-02 10:38:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-02 10:38:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:38:57 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 10:38:57 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 10:38:57 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 10:38:57 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 10:38:57 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 10:38:57 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 10:38:57 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 10:38:58 INFO  o.h.t.s.e.i.InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: user
+2017-05-02 10:38:58 INFO  o.h.t.s.e.i.InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: user
+2017-05-02 10:38:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@682a3469: startup date [Tue May 02 10:38:53 ICT 2017]; root of context hierarchy
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 10:38:58 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 10:38:58 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 10:38:58 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:38:58 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:38:58 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:38:59 INFO  o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2017-05-02 10:38:59 INFO  o.s.j.e.a.AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-05-02 10:38:59 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8080 (http)
+2017-05-02 10:38:59 INFO  c.e.DemoRestApiApplication:57 - Started DemoRestApiApplication in 6.672 seconds (JVM running for 7.326)
+2017-05-02 10:39:08 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-02 10:39:08 INFO  o.s.w.s.DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-02 10:39:08 INFO  o.s.w.s.DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2017-05-02 10:39:41 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@682a3469: startup date [Tue May 02 10:38:53 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:41 INFO  o.s.j.e.a.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-05-02 10:39:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:42 INFO  c.e.DemoRestApiApplication:48 - Starting DemoRestApiApplication on Sarindys-MacBook-Pro.local with PID 1181 (/Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI/target/classes started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 10:39:42 INFO  c.e.DemoRestApiApplication:637 - No active profile set, falling back to default profiles: default
+2017-05-02 10:39:42 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d706636: startup date [Tue May 02 10:39:42 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:45 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-05-02 10:39:45 INFO  o.a.c.c.StandardService:179 - Starting service Tomcat
+2017-05-02 10:39:45 INFO  o.a.c.c.StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-02 10:39:45 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring embedded WebApplicationContext
+2017-05-02 10:39:45 INFO  o.s.w.c.ContextLoader:276 - Root WebApplicationContext: initialization completed in 2467 ms
+2017-05-02 10:39:45 INFO  o.s.b.w.s.ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-02 10:39:45 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-02 10:39:45 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-02 10:39:45 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-02 10:39:45 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-02 10:39:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:45 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 10:39:45 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 10:39:45 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 10:39:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d706636: startup date [Tue May 02 10:39:42 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 10:39:46 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 10:39:46 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api/] onto handler '/api/'
+2017-05-02 10:39:46 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:46 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:46 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:46 INFO  o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2017-05-02 10:39:47 INFO  o.s.j.e.a.AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-05-02 10:39:47 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8080 (http)
+2017-05-02 10:39:47 INFO  c.e.DemoRestApiApplication:57 - Started DemoRestApiApplication in 4.547 seconds (JVM running for 55.17)
+2017-05-02 10:39:54 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d706636: startup date [Tue May 02 10:39:42 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:54 INFO  o.s.j.e.a.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-05-02 10:39:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:54 INFO  c.e.DemoRestApiApplication:48 - Starting DemoRestApiApplication on Sarindys-MacBook-Pro.local with PID 1181 (/Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI/target/classes started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 10:39:54 INFO  c.e.DemoRestApiApplication:637 - No active profile set, falling back to default profiles: default
+2017-05-02 10:39:54 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3023bb1e: startup date [Tue May 02 10:39:54 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:56 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-05-02 10:39:56 INFO  o.a.c.c.StandardService:179 - Starting service Tomcat
+2017-05-02 10:39:56 INFO  o.a.c.c.StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-02 10:39:56 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring embedded WebApplicationContext
+2017-05-02 10:39:56 INFO  o.s.w.c.ContextLoader:276 - Root WebApplicationContext: initialization completed in 1247 ms
+2017-05-02 10:39:56 INFO  o.s.b.w.s.ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-02 10:39:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-02 10:39:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-02 10:39:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-02 10:39:56 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-02 10:39:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:56 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 10:39:56 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 10:39:56 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 10:39:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3023bb1e: startup date [Tue May 02 10:39:54 ICT 2017]; root of context hierarchy
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 10:39:56 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 10:39:56 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 10:39:56 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:56 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:56 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:39:56 INFO  o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2017-05-02 10:39:56 INFO  o.s.j.e.a.AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-05-02 10:39:56 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8080 (http)
+2017-05-02 10:39:56 INFO  c.e.DemoRestApiApplication:57 - Started DemoRestApiApplication in 1.809 seconds (JVM running for 64.652)
+2017-05-02 10:40:20 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-02 10:40:20 INFO  o.s.w.s.DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-02 10:40:20 INFO  o.s.w.s.DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2017-05-02 10:40:43 INFO  o.h.h.i.QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-02 10:44:58 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:384 - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@473dac75; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"]); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@473dac75; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"])
+2017-05-02 10:44:58 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:189 - Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@473dac75; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"]); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@473dac75; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"])
+2017-05-02 10:46:23 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:384 - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: java.io.PushbackInputStream@560cde1e; line: 3, column: 21]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: java.io.PushbackInputStream@560cde1e; line: 3, column: 21]
+2017-05-02 10:46:23 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:189 - Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: java.io.PushbackInputStream@560cde1e; line: 3, column: 21]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: java.io.PushbackInputStream@560cde1e; line: 3, column: 21]
+2017-05-02 10:47:34 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:384 - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@5efd8d62; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"]); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@5efd8d62; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"])
+2017-05-02 10:47:34 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:189 - Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: Could not read JSON document: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@5efd8d62; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"]); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize value of type java.util.Date from String "1980/02/14": not a valid representation (error: Failed to parse Date value '1980/02/14': Can not parse date "1980/02/14": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: java.io.PushbackInputStream@5efd8d62; line: 3, column: 16] (through reference chain: com.example.model.User["createdDate"])
+2017-05-02 10:50:00 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3023bb1e: startup date [Tue May 02 10:39:54 ICT 2017]; root of context hierarchy
+2017-05-02 10:50:00 INFO  o.s.j.e.a.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-05-02 10:50:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:55:11 INFO  c.e.DemoRestApiApplication:48 - Starting DemoRestApiApplication on Sarindys-MacBook-Pro.local with PID 1312 (/Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI/target/classes started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 10:55:11 INFO  c.e.DemoRestApiApplication:637 - No active profile set, falling back to default profiles: default
+2017-05-02 10:55:11 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51cc2e82: startup date [Tue May 02 10:55:11 ICT 2017]; root of context hierarchy
+2017-05-02 10:55:13 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-05-02 10:55:13 INFO  o.a.c.c.StandardService:179 - Starting service Tomcat
+2017-05-02 10:55:13 INFO  o.a.c.c.StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-02 10:55:13 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring embedded WebApplicationContext
+2017-05-02 10:55:13 INFO  o.s.w.c.ContextLoader:276 - Root WebApplicationContext: initialization completed in 2166 ms
+2017-05-02 10:55:13 INFO  o.s.b.w.s.ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-02 10:55:13 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-02 10:55:13 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-02 10:55:13 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-02 10:55:13 INFO  o.s.b.w.s.FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-02 10:55:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:55:14 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 10:55:14 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 10:55:14 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 10:55:14 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 10:55:14 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 10:55:14 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 10:55:15 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 10:55:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51cc2e82: startup date [Tue May 02 10:55:11 ICT 2017]; root of context hierarchy
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 10:55:16 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 10:55:16 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 10:55:16 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:55:16 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:55:16 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:55:16 INFO  o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2017-05-02 10:55:16 INFO  o.s.j.e.a.AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-05-02 10:55:16 INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8080 (http)
+2017-05-02 10:55:16 INFO  c.e.DemoRestApiApplication:57 - Started DemoRestApiApplication in 5.702 seconds (JVM running for 6.41)
+2017-05-02 10:55:24 INFO  o.a.c.c.C.[.[.[/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-02 10:55:24 INFO  o.s.w.s.DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-02 10:55:24 INFO  o.s.w.s.DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-05-02 10:55:24 INFO  o.h.h.i.QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-02 10:56:36 INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:987 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51cc2e82: startup date [Tue May 02 10:55:11 ICT 2017]; root of context hierarchy
+2017-05-02 10:56:36 INFO  o.s.j.e.a.AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2017-05-02 10:56:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:57:05 INFO  c.e.DemoRestApiApplicationTests:48 - Starting DemoRestApiApplicationTests on Sarindys-MacBook-Pro.local with PID 1349 (started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 10:57:05 INFO  c.e.DemoRestApiApplicationTests:637 - No active profile set, falling back to default profiles: default
+2017-05-02 10:57:05 INFO  o.s.w.c.s.GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 10:57:05 ICT 2017]; root of context hierarchy
+2017-05-02 10:57:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:57:07 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 10:57:07 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 10:57:07 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 10:57:07 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 10:57:07 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 10:57:07 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 10:57:08 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 10:57:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 10:57:05 ICT 2017]; root of context hierarchy
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 10:57:09 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 10:57:09 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 10:57:09 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:57:09 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:57:09 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 10:57:09 INFO  c.e.DemoRestApiApplicationTests:57 - Started DemoRestApiApplicationTests in 5.045 seconds (JVM running for 5.806)
+2017-05-02 10:57:09 INFO  o.s.w.c.s.GenericWebApplicationContext:987 - Closing org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 10:57:05 ICT 2017]; root of context hierarchy
+2017-05-02 10:57:10 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:35:23 INFO  c.e.DemoRestApiApplicationTests:48 - Starting DemoRestApiApplicationTests on Sarindys-MacBook-Pro.local with PID 1322 (started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 20:35:23 INFO  c.e.DemoRestApiApplicationTests:637 - No active profile set, falling back to default profiles: default
+2017-05-02 20:35:23 INFO  o.s.w.c.s.GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 20:35:23 ICT 2017]; root of context hierarchy
+2017-05-02 20:35:25 ERROR o.a.t.j.p.ConnectionPool:181 - Unable to create initial connections of pool.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04$$FastClassBySpringCGLIB$$69b18434.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+2017-05-02 20:35:25 WARN  o.s.b.a.o.j.DatabaseLookup:80 - Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:339)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04$$FastClassBySpringCGLIB$$69b18434.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$c3f64f04.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
+	... 86 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 87 common frames omitted
+2017-05-02 20:35:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:35:25 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 20:35:25 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 20:35:25 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 20:35:25 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 20:35:25 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 20:35:25 ERROR o.a.t.j.p.ConnectionPool:181 - Unable to create initial connections of pool.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:254)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:228)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+2017-05-02 20:35:25 WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata : Unknown database 'user'
+2017-05-02 20:35:25 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 20:35:25 INFO  o.h.e.j.e.i.LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2017-05-02 20:35:26 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 20:35:26 ERROR o.a.t.j.p.ConnectionPool:181 - Unable to create initial connections of pool.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+2017-05-02 20:35:26 WARN  o.s.w.c.s.GenericWebApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2017-05-02 20:35:26 INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-05-02 20:35:26 ERROR o.s.b.SpringApplication:815 - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 41 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 47 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 53 common frames omitted
+2017-05-02 20:35:26 ERROR o.s.t.c.TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@57175e74] to prepare test instance [com.example.DemoRestApiApplicationTests@7ab1127c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:856)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 26 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 41 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to open JDBC connection for schema management target
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:42)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:57)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:472)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 47 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'user'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2205)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2236)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2035)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.prepare(TargetDatabaseImpl.java:38)
+	... 53 common frames omitted
+2017-05-02 20:36:11 INFO  c.e.DemoRestApiApplicationTests:48 - Starting DemoRestApiApplicationTests on Sarindys-MacBook-Pro.local with PID 1326 (started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 20:36:11 INFO  c.e.DemoRestApiApplicationTests:637 - No active profile set, falling back to default profiles: default
+2017-05-02 20:36:11 INFO  o.s.w.c.s.GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 20:36:11 ICT 2017]; root of context hierarchy
+2017-05-02 20:36:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:36:13 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 20:36:13 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 20:36:13 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 20:36:13 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 20:36:13 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 20:36:13 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 20:36:14 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 20:36:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 20:36:11 ICT 2017]; root of context hierarchy
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 20:36:15 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 20:36:15 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 20:36:15 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:36:15 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:36:15 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:36:15 INFO  c.e.DemoRestApiApplicationTests:57 - Started DemoRestApiApplicationTests in 4.629 seconds (JVM running for 5.471)
+2017-05-02 20:36:15 INFO  o.s.w.c.s.GenericWebApplicationContext:987 - Closing org.springframework.web.context.support.GenericWebApplicationContext@2b91004a: startup date [Tue May 02 20:36:11 ICT 2017]; root of context hierarchy
+2017-05-02 20:36:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:51:02 INFO  c.e.DemoRestApiApplicationTests:48 - Starting DemoRestApiApplicationTests on Sarindys-MacBook-Pro.local with PID 1381 (started by dy in /Users/dy/Documents/java/Workspaces/dnynn_workspace/demoRestAPI)
+2017-05-02 20:51:02 INFO  c.e.DemoRestApiApplicationTests:637 - No active profile set, falling back to default profiles: default
+2017-05-02 20:51:02 INFO  o.s.w.c.s.GenericWebApplicationContext:582 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2fb3536e: startup date [Tue May 02 20:51:02 ICT 2017]; root of context hierarchy
+2017-05-02 20:51:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:349 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:51:05 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-02 20:51:05 INFO  o.h.Version:37 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-02 20:51:05 INFO  o.h.c.Environment:213 - HHH000206: hibernate.properties not found
+2017-05-02 20:51:05 INFO  o.h.c.Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-05-02 20:51:05 INFO  o.h.a.c.Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-02 20:51:05 INFO  o.h.d.Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-02 20:51:06 INFO  o.h.t.h.SchemaUpdate:105 - HHH000228: Running hbm2ddl schema update
+2017-05-02 20:51:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:379 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2fb3536e: startup date [Tue May 02 20:51:02 ICT 2017]; root of context hierarchy
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.model.User>> com.example.controller.RestApiController.listAllUsers()
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.getUser(int)
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.createUser(com.example.model.User,org.springframework.web.util.UriComponentsBuilder)
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.updateUser(int,com.example.model.User)
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.example.controller.RestApiController.deleteUser(int)
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-02 20:51:07 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-02 20:51:07 INFO  o.s.w.s.h.BeanNameUrlHandlerMapping:362 - Mapped URL path [/api] onto handler '/api'
+2017-05-02 20:51:07 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:51:07 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:51:07 INFO  o.s.w.s.h.SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-02 20:51:07 INFO  c.e.DemoRestApiApplicationTests:57 - Started DemoRestApiApplicationTests in 5.591 seconds (JVM running for 6.374)
+2017-05-02 20:51:07 INFO  o.s.w.c.s.GenericWebApplicationContext:987 - Closing org.springframework.web.context.support.GenericWebApplicationContext@2fb3536e: startup date [Tue May 02 20:51:02 ICT 2017]; root of context hierarchy
+2017-05-02 20:51:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:548 - Closing JPA EntityManagerFactory for persistence unit 'default'
