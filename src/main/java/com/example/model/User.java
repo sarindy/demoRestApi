@@ -21,7 +21,7 @@ public class User {
 	@Column(name = "user_name")
 	private String userName;
 	@Column(name = "create_date")
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm a z")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd hh:mm:ss")
 	private Date createdDate;
 
 	@Override
